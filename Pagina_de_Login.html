@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Página de Login</title>
+	<link rel="stylesheet" type="text/css" href="css/Stylo.css">
+</head>
+<body>
+
+	<H1>Bem Vindos</H1>
+	<br>
+	<h2>Faça seu login:</h2>
+	<!-- inicio formulário -->
+	<form>
+		<!-- campo de email -->
+		<div>
+			<div><label for="l_email">Email:</label></div>
+			<input type="email" nome="email" id="email"  size="50" placeholder="exemplo:email@provedor.com" required>
+		</div>
+		<!-- campo de senha -->
+		<div>
+			<div><label for="l_senha">Senha:</label></div>
+			<input type="password" name="senha" id="senha" size="50" maxlength="10" minlength="1" placeholder="*********" required>
+		</div>
+		<!-- botão de login -->
+		<div>
+			 <button type="button" name="entrar" id="entrar">Entrar</button>
+		</div>
+		 <br>
+		 <!-- botão de limpar os campos -->
+		 <div>
+		 	<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
+		</div>
+    </form>
+
+	<script src="javascript/index.js"></script>
+</body>
+</html>

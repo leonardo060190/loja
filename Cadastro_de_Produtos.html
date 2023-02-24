@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro de Produtos</title>
+	<link rel="stylesheet" type="text/css" href="css/Stylo.css">
+</head>
+<body>
+	<h1>Cadastro de Produtos</h1>
+	<!-- inicio do formulário de cadastro -->
+	<form id="inCadastro" name="inCadastro">
+		<!-- campo de Código do produto -->
+		<div><label for="l_codigo">Codigo</label></div>
+		 <input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código" required>
+		<!-- campo de nome do produto -->
+		<div><label for="l_Nome">Nome</label></div>
+		 <input type="text" name="inNome" id="inNome" size="40" maxlength="50" placeholder="Digite o Nome" required>
+		<!-- campo de Preço do produto -->
+		<div><label for="l_Preço">Preço de Venda</label></div>
+		 <input type="text" name="inPreço" id="inPreço" size="40" maxlength="50" placeholder="Digite o Preço" required>
+		<p>
+		<!-- campo de seleção de categorias -->
+		<label for="l_Categoria">Categoria:</label>
+		
+         <select name="inCategoria" id="inCategoria">
+           <option value="masculino">Masculino</option>
+		
+           <option value="feminino">Feminino</option>
+		 </select>
+		</p>
+		<!-- campo checkbox para selecionar Tamanhos Disponiveis -->
+		<label for="l_esporte">Tamanhos Disponiveis:</label>
+
+		<input type="checkbox" name="inP" id="inP" value="P">
+			<label for=" l_P">P</label>
+
+		<input type="checkbox" name="inM" id="inM" value="M">
+			<label for="l_M">M</label>
+		
+		<input type="checkbox" name="inG" id="inG" value="G">
+			<label for="l_M">G</label>
+		
+		<input type="checkbox" name="inGG" id="inGG" value="GG">
+			<label for="l_GG">GG</label>
+		</p>
+		<p>
+			<!-- campo radio selecionar se esta Ativo -->
+		<label for="l_Ativo">Ativo:</label>
+
+		 <input type="radio" name="inAtivo" id="inAtivo" value="Sim">
+			<label for="l_Sim">Sim</label>
+
+		 <input type="radio" name="inAtivo" id="inAtivo" value="Nao">
+			<label for="l_Nao">Não</label>
+		</p>
+		
+
+	</form>
+	<!-- botão para cadastrar produtos -->
+	<button type="submit" name="l_Cadastrar" id="l_Cadastrar" value="Cadastrar_Produtos" onclick="window.location='Lista_de_Produtos.html'">Casdastrar</button>
+	
+	<!-- botão para voltar a página Lista_de_Produtos -->
+	<button type="button" name="l_retorno_Lista" id="l_retorno_Lista" value="Lista_de_Produtos" onclick="window.location='Lista_de_Produtos.html'">Retrone a Lista</button>
+
+
+	<script src="javascript/index.js"></script>
+</body>
+</html>
