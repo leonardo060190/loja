@@ -2,13 +2,16 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lista de Produtos</title>
 	<link rel="stylesheet" type="text/css" href="css/Stylo.css">
 </head>
-<body>
+<body onload="listar()">
 	<h1 name="masculino" id="masculino">Lista de Produtos Maculino</h1>
 	<br>
 	<table borde="2" width="100%" name="inMasculino" id="inMasculino">
+		<thead>
 		<tr>
 			<th>Código</th>
 			<th>Nome</th>
@@ -17,38 +20,13 @@
 			<th>Tamanho disponivel</th>
 			<th>Ativo</th>
 		</tr>
-		<tr>
-			<td>0001</td>
-			<td>Calça jeans</td>
-			<td>Esporte</td>
-			<td>69.90</td>
-			<td>P, M, G, GG</td>
-			<td>Sim</td>
-		</tr>
-		<tr>
-			<td>0002</td>
-			<td>Jaqueta</td>
-			<td>Esporte</td>
-			<td>120.90</td>
-			<td>P, M, G, GG</td>
-			<td>Sim</td>
-		</tr>
-		<tr>
-			<td>0003</td>
-			<td>Camisa</td>
-			<td>Social</td>
-			<td>20.90</td>
-			<td>P, M, G, GG</td>
-			<td>Sim</td>
-		</tr>
-		<tr>
-			<td>0004</td>
-			<td>Calça Social</td>
-			<td>Social</td>
-			<td>61.90</td>
-			<td>P, M, G, GG</td>
-			<td>Não</td>
-		</tr>
+	</thead>
+
+	<tbody>
+
+
+	</tbody>
+		
 	</table>
 	<br>
 	<!-- lista de produtos femininos -->
@@ -56,6 +34,7 @@
 	<br>
 	<!-- incio da tabela -->
 	<table borde="2" width="100%" name="inFeminino" id="inFeminino">
+		<thead>
 		<tr>
 			<th>Código</th>
 			<th>Nome</th>
@@ -64,39 +43,24 @@
 			<th>Tamanho disponivel</th>
 			<th>Ativo</th>
 		</tr>
-		<tr>
-			<td>0001</td>
-			<td>Calça jeans</td>
-			<td>Esporte</td>
-			<td>69.90</td>
-			<td>P, M, G</td>
-			<td>Sim</td>
-		</tr>
-		<tr>
-			<td>0002</td>
-			<td>Jaqueta</td>
-			<td>Esporte</td>
-			<td>120.90</td>
-			<td>P, M, G</td>
-			<td>Sim</td>
-		</tr>
-		<tr>
-			<td>0003</td>
-			<td>Camisa</td>
-			<td>Social</td>
-			<td>20.90</td>
-			<td>P, M, G</td>
-			<td>Sim</td>
-		</tr>
-		<tr>
-			<td>0004</td>
-			<td>Calça legging</td>
-			<td>Esporte</td>
-			<td>40.90</td>
-			<td>P, M, G</td>
-			<td>Não</td>
-		</tr>
+	</thead>
+
+	<tbody>
+
+
+	</tbody>
+		
 	</table>
+
+	<script id="colunas" type="text/x-jsrender">
+		<td data-column="Codigo"></td>
+		<td data-column="Nome"></td>
+		<td data-column="Categoria"></td>
+		<td data-column="Preco_de_Venda"></td>
+		<td data-column="Tamanho_Disponivel"></td>
+		<td data-column="Ativo"></td>
+	</script>
+
 	<!-- botão para ir a página de cadastro -->
 	<br><br>
 		 <button type="button" name="l_lista" id="l_lista" onclick="window.location='Cadastro_de_Produtos.html'">Casdastro de Produtos</button>

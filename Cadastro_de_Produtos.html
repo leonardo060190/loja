@@ -9,15 +9,19 @@
 	<h1>Cadastro de Produtos</h1>
 	<!-- inicio do formulário de cadastro -->
 	<form id="inCadastro" name="inCadastro">
+
 		<!-- campo de Código do produto -->
 		<div><label for="l_codigo">Código</label></div>
 		 <input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código" required>
+
 		<!-- campo de nome do produto -->
 		<div><label for="l_Nome">Nome</label></div>
 		 <input type="text" name="inNome" id="inNome" size="40" maxlength="50" placeholder="Digite o Nome" required>
+
 		<!-- campo de Preço do produto -->
 		<div><label for="l_Preço">Preço de Venda</label></div>
-		 <input type="text" name="inPreço" id="inPreço" size="40" maxlength="50" placeholder="Digite o Preço" required>
+		 <input type="text" name="inPreço" id="inPreco" size="40" maxlength="50" placeholder="Digite o Preço" required>
+
 		<p>
 		<!-- campo de seleção de categorias -->
 		<label for="l_Categoria">Categoria:</label>
@@ -59,14 +63,16 @@
 			<label for="l_Nao">Não</label>
 		</p>
 		
+	<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
 
-	</form>
+	
 	<!-- botão para cadastrar produtos -->
-	<button type="submit" name="l_Cadastrar" id="l_Cadastrar" onclick="window.location='Lista_de_Produtos.html'">Casdastrar</button>
+	<button type="button" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrar()">Casdastrar</button>
 	
 	<!-- botão para voltar a página Lista_de_Produtos -->
 	<button type="button" name="l_retorno_Lista" id="l_retorno_Lista" onclick="window.location='Lista_de_Produtos.html'">Retrone a Lista</button>
 
+	</form>
 
 	<script src="javascript/index.js"></script>
 </body>

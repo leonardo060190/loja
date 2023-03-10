@@ -15,3 +15,77 @@ function logar(){
             return false;
 };
 };
+
+function cadastrar(){
+
+    let produtos = [];
+
+    let codigo = document.getElementById("inCodigo").value;
+    let nome = document.getElementById("inNome").value;
+    let preco = document.getElementById("inPreco").value;
+
+    if (sessionStorage.getItem("vetor_produtos")){
+        produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
+
+    };
+
+    let descricao_do_Produto = {};
+            descricao_do_Produto ={
+                Codigo: codigo,
+                Nome: nome,
+                // Categoria: 
+                Preco_de_Venda: preco,
+                // Tamanho_Disponivel:
+                // Ativo:
+            };
+
+        produtos.push(descricao_do_Produto);
+        sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
+
+            return true;
+
+            console.log(produtos);
+};
+
+function listar(){
+    let dados = document.getElementById("culunas");
+    let registros = document.getElementsByTagName("tbody")[0];
+
+    let produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
+
+    for (let i = 0; i < produtos.length; i++){
+
+        let novaLinha = document.createElement("tr");
+
+        registros.appendChild(novaLinha);
+
+        novaLinha.innerHTML = dados.innerHTML;
+
+        for (let indice in novaLinha.childNodes){
+
+            let celula = novaLinha.childNodes[indice];
+
+                switch(celula.dataset.column){
+                    case "Codigo":
+                        celula.innerHTML = produtos[i]["Codigo"];
+                        break;
+                    case "Nome":
+                        celula.innerHTML = produtos[i]["Nome"];
+                        break;
+                    // case "Categoria":
+                    //     celula.innerHTML  = produtos[i]["Categoria"]
+                    //     break;
+                    case "Preco_de_Venda":
+                        celula.innerHTML = produtos[i]["Preco_de_Venda"];
+                        break;
+                    // case "Tamanho_Disponivel":
+                    //     celula.innerHTML = produtos[i]["Tamanho_Disponivel"];
+                    //     break;
+                    // case "Ativo":
+                    //     celula.innerHTML = produtos[i]["Ativo"];
+                    //     break;
+                    
+                }
+        }
+    }
+}
