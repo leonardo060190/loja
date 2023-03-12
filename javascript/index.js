@@ -16,15 +16,20 @@ function logar(){
 };
 };
 
-function cadastrar(){
+function cadastrarProdutos(){
+
+    const sexo = document.querySelector('input[name="sexo"]:checked').value;
+    console.log(sexo)
 
     let produtos = [];
 
     let codigo = document.getElementById("inCodigo").value;
     let nome = document.getElementById("inNome").value;
+    let categoria = document.getElementById("inCategoria").value;
     let preco = document.getElementById("inPreco").value;
+    let ativo = document. querySelector('input[name="inAtivo"]:checked').value;
 
-    if (sessionStorage.getItem("vetor_produtos")){
+        if (sessionStorage.getItem("vetor_produtos")){
         produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
 
     };
@@ -33,10 +38,10 @@ function cadastrar(){
             descricao_do_Produto ={
                 Codigo: codigo,
                 Nome: nome,
-                // Categoria: 
+                Categoria: categoria, 
                 Preco_de_Venda: preco,
-                // Tamanho_Disponivel:
-                // Ativo:
+                // Tamanho_Disponivel: tamanho,
+                Ativo: ativo
             };
 
         produtos.push(descricao_do_Produto);
@@ -44,15 +49,15 @@ function cadastrar(){
 
             return true;
 
-            console.log(produtos);
+            
 };
 
-function listar(){
-    let dados = document.getElementById("culunas");
+function listarProdutos(){
+    let dados = document.getElementById("colunas");
     let registros = document.getElementsByTagName("tbody")[0];
-
     let produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
-
+    
+    
     for (let i = 0; i < produtos.length; i++){
 
         let novaLinha = document.createElement("tr");
@@ -60,10 +65,12 @@ function listar(){
         registros.appendChild(novaLinha);
 
         novaLinha.innerHTML = dados.innerHTML;
-
+       
         for (let indice in novaLinha.childNodes){
 
             let celula = novaLinha.childNodes[indice];
+
+            if(celula.nodeName == "TD"){
 
                 switch(celula.dataset.column){
                     case "Codigo":
@@ -72,20 +79,34 @@ function listar(){
                     case "Nome":
                         celula.innerHTML = produtos[i]["Nome"];
                         break;
-                    // case "Categoria":
-                    //     celula.innerHTML  = produtos[i]["Categoria"]
-                    //     break;
+                    case "Categoria":
+                        celula.innerHTML  = produtos[i]["Categoria"]
+                        break;
                     case "Preco_de_Venda":
                         celula.innerHTML = produtos[i]["Preco_de_Venda"];
                         break;
                     // case "Tamanho_Disponivel":
                     //     celula.innerHTML = produtos[i]["Tamanho_Disponivel"];
                     //     break;
-                    // case "Ativo":
-                    //     celula.innerHTML = produtos[i]["Ativo"];
-                    //     break;
+                    case "Ativo":
+                        celula.innerHTML = produtos[i]["Ativo"];
+                        break;
                     
                 }
+            }
         }
     }
+}
+
+
+function cadastrar_clientes(){
+    let clientes = [];
+
+    let codigo = document.getElementById("incodigo").value;
+    let nome = document.getElementById("NomeCliente").value;
+
+}
+
+function listarClientes(){
+
 }

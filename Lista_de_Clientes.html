@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="css/Stylo.css">
+
+</head>
+<body onload="listarClientes()">
+    <h1>Lista de Clientes</h1>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Telefone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <script id="colunas" type="text/x-jsrender">
+        <td data-column="">Codigo</td>
+        <td data-column="">Nome</td>
+        <td data-column="">CPF</td>
+        <td data-column="">Data_de_Nascimento</td>
+        <td data-column="">Telefone</td>
+        <td data-column="">Email</td>
+    </script>
+
+    <br><br>
+		 <button type="button" name="l_lista" id="l_lista" onclick="window.location='Cadastro_de_Clientes.html'">Casdastro de Produtos</button>
+	
+	<!-- botão para voltar a página de login -->
+		 <button type="button" name="l_logoff" id="l_logoff" onclick="window.location='Pagina_de_login.html'">Logoff</button>
+
+
+
+
+    <script src="javascript/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro_de_Clientes</title>
+    <link rel="stylesheet" type="text/css" href="css/Stylo.css">
+
+</head>
+<body>
+    <h1>Cadastro de Produtos</h1>
+	<hr>
+	<!-- inicio do formulário de cadastro -->
+	<form id="inCadastro" name="inCadastro" method="post" action="Lista_de_Clientes.html">
+
+		<!-- campo de Código do Cliente -->
+		<div><label for="l_codigo">Código</label></div>
+		 <input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código" required>
+
+		<!-- campo de nome do Cliente -->
+		<div><label for="NomeCliente">Nome</label></div>
+		 <input type="text" name="NomeCliente" id="NomeCliente" size="40" maxlength="50" placeholder="Digite o Nome" required>
+
+		<div><label for="l_CPF">CPF</label></div>
+		 <input type="text" name="inCPF" id="inCPF" size="40" maxlength="50" placeholder="Digite o CPF" required>
+        
+        <div><label for="l_Data_Nascimento">Data de Nascimento</label></div>
+		 <input type="date" name="inData_Nascimento" id="inData_Nascimento" size="40" maxlength="50" placeholder="Digite a Data_de_Nascimento" required>
+         
+        <div><label for="l_Telefone">Telefone</label></div>
+		 <input type="tel" name="inTelefone" id="inTelefone" size="40" maxlength="50" placeholder="Digite o Número de Telefone" required>
+
+         <div><label for="l_Email">Email</label></div>
+		 <input type="email" name="inEmail" id="inEmail" size="40" maxlength="50" placeholder="Digite o Email" required>
+
+		<hr>
+	<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
+
+	
+	<!-- botão para cadastrar produtos -->
+	<button type="submit" name="l_Cadastrar_Cliente" id="l_Cadastrar_Cliente" onclick="cadastrar_clientes()">Casdastrar</button>
+	
+	<!-- botão para voltar a página Lista_de_Produtos -->
+	<button type="button" name="l_retorno_Lista" id="l_retorno_Lista" onclick="window.location='Lista_de_Clientes.html'">Retorne a Lista de clientes</button>
+
+	</form>
+
+
+    <script src="javascript/index.js"></script>
+
+</body>
+</html>

@@ -7,6 +7,7 @@
 </head>
 <body>
 	<h1>Cadastro de Produtos</h1>
+	<hr>
 	<!-- inicio do formulário de cadastro -->
 	<form id="inCadastro" name="inCadastro">
 
@@ -40,16 +41,16 @@
 		<!-- campo checkbox para selecionar Tamanhos Disponiveis -->
 		<label for="l_esporte">Tamanhos Disponiveis:</label>
 
-		<input type="checkbox" name="inP" id="inP" value="P">
+		<input type="checkbox" name="tamanho" id="inP" value="P">
 			<label for=" l_P">P</label>
 
-		<input type="checkbox" name="inM" id="inM" value="M">
+		<input type="checkbox" name="tamanho" id="inM" value="M">
 			<label for="l_M">M</label>
 		
-		<input type="checkbox" name="inG" id="inG" value="G">
+		<input type="checkbox" name="tamanho" id="inG" value="G">
 			<label for="l_M">G</label>
 		
-		<input type="checkbox" name="inGG" id="inGG" value="GG">
+		<input type="checkbox" name="tamanho" id="inGG" value="GG">
 			<label for="l_GG">GG</label>
 		</p>
 		<p>
@@ -59,15 +60,24 @@
 		 <input type="radio" name="inAtivo" id="inAtivo" value="Sim">
 			<label for="l_Sim">Sim</label>
 
-		 <input type="radio" name="inAtivo" id="inAtivo" value="Nao">
+		<input type="radio" name="inAtivo" id="inAtivo" value="Nao">
 			<label for="l_Nao">Não</label>
 		</p>
-		
+		<p>
+		<label for="l_sexo">Sexo:</label>
+
+		 <input type="radio" name="sexo" id="sexo" value="feminino">
+			<label for="l_F">Feminino</label>
+
+		<input type="radio" name="sexo" id="sexo" value="masculino">
+			<label for="l_NM">Masculino</label>
+		</p>
+		<hr>
 	<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
 
 	
 	<!-- botão para cadastrar produtos -->
-	<button type="button" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrar()">Casdastrar</button>
+	<button type="button" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrarProdutos()">Casdastrar</button>
 	
 	<!-- botão para voltar a página Lista_de_Produtos -->
 	<button type="button" name="l_retorno_Lista" id="l_retorno_Lista" onclick="window.location='Lista_de_Produtos.html'">Retrone a Lista</button>
