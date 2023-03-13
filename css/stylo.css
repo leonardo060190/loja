@@ -51,6 +51,7 @@ input{
 table{
 	border-collapse: collapse;
 	width:100%;
+	background-color: rgba(197, 196, 196, 0.671)
 }
 th, td {
 	padding: 5px;
