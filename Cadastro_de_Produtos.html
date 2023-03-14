@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="utf-8">
 	<title>Cadastro de Produtos</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/Stylo.css">
 </head>
+
 <body>
 	<h1>Cadastro de Produtos</h1>
 	<hr>
@@ -13,77 +17,84 @@
 
 		<!-- campo de Código do produto -->
 		<div><label for="l_codigo">Código</label></div>
-		 <input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código" required>
+		<input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código"
+			required>
 
 		<!-- campo de nome do produto -->
 		<div><label for="l_Nome">Nome</label></div>
-		 <input type="text" name="inNome" id="inNome" size="40" maxlength="50" placeholder="Digite o Nome" required>
+		<input type="text" name="inNome" id="inNome" size="40" maxlength="50" placeholder="Digite o Nome" required>
 
 		<!-- campo de Preço do produto -->
 		<div><label for="l_Preço">Preço de Venda</label></div>
-		 <input type="text" name="inPreço" id="inPreco" size="40" maxlength="50" placeholder="Digite o Preço" required>
+		<input type="text" name="inPreço" id="inPreco" size="40" maxlength="50" placeholder="Digite o Preço" required>
 
 		<p>
-		<!-- campo de seleção de categorias -->
-		<label for="l_Categoria">Categoria:</label>
-		
-         <select name="inCategoria" id="inCategoria">
-           
-		   <option value="camisa">Camisa</option>
-		
-           <option value="calcas">Calças</option>
+			<!-- campo de seleção de categorias -->
+			<label for="l_Categoria">Categoria:</label>
 
-		   <option value="basicas">Básicas</option>
+			<select name="inCategoria" id="inCategoria">
 
-		   <option value="social">Social</option>
-		 </select>
+				<option value="camisa">Camisa</option>
+
+				<option value="calcas">Calças</option>
+
+				<option value="basicas">Básicas</option>
+
+				<option value="social">Social</option>
+			</select>
 		</p>
 		<!-- campo checkbox para selecionar Tamanhos Disponiveis -->
 		<label for="l_esporte">Tamanhos Disponiveis:</label>
 
-		<input type="checkbox" name="tamanho" id="tamanho" value="P">
-			<label for=" l_P">P</label>
+		<input type="checkbox" name="tamanhoP" id="tamanho" value="P">
+		<label for=" l_P">P</label>
 
-		<input type="checkbox" name="tamanho" id="tamanho" value="M">
-			<label for="l_M">M</label>
-		
-		<input type="checkbox" name="tamanho" id="tamanho" value="G">
-			<label for="l_M">G</label>
-		
-		<input type="checkbox" name="tamanho" id="tamanho" value="GG">
-			<label for="l_GG">GG</label>
+		<input type="checkbox" name="tamanhoM" id="tamanho" value="M">
+		<label for="l_M">M</label>
+
+		<input type="checkbox" name="tamanhoG" id="tamanho" value="G">
+		<label for="l_M">G</label>
+
+		<input type="checkbox" name="tamanhoGG" id="tamanho" value="GG">
+		<label for="l_GG">GG</label>
 		</p>
 		<p>
 			<!-- campo radio selecionar se esta Ativo -->
-		<label for="l_Ativo">Ativo:</label>
+			<label for="l_Ativo">Ativo:</label>
 
-		 <input type="radio" name="inAtivo" id="inAtivo" value="Sim">
+			<input type="radio" name="inAtivo" id="inAtivo" value="Sim">
 			<label for="l_Sim">Sim</label>
 
-		<input type="radio" name="inAtivo" id="inAtivo" value="Nao">
+			<input type="radio" name="inAtivo" id="inAtivo" value="Nao">
 			<label for="l_Nao">Não</label>
 		</p>
 		<p>
-		<label for="l_sexo">Sexo:</label>
+			<label for="l_sexo">Sexo:</label>
 
-		 <input type="radio" name="sexo" id="sexo" value="feminino">
+			<input type="radio" name="sexo" id="sexo" value="feminino">
 			<label for="l_F">Feminino</label>
 
-		<input type="radio" name="sexo" id="sexo" value="masculino">
+			<input type="radio" name="sexo" id="sexo" value="masculino">
 			<label for="l_NM">Masculino</label>
 		</p>
 		<hr>
-	<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
+		<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
 
-	
-	<!-- botão para cadastrar produtos -->
-	<button type="button" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrarProdutos()" >Casdastrar</button>
-	
-	<!-- botão para voltar a página Lista_de_Produtos -->
-	<button type="button" name="l_retorno_Lista" id="l_retorno_Lista" onclick="window.location='Lista_de_Produtos.html'">Retrone a Lista</button>
+
+		<!-- botão para cadastrar produtos -->
+		<button type="button" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrarProdutos()">Casdastrar</button>
+
+		<!-- botão para voltar a página Lista_de_Produtos -->
+		<button type="button" name="l_retorno_Lista" id="l_retorno_Lista"
+			onclick="window.location='Lista_de_Produtos.html'">Retrone a Lista</button>
+
+		<button type="button" name="restornoMenu" id="restornoMenu"
+			onclick="window.location='Pagina_de_Menu.html'">Pagina
+			Inicial</button>
 
 	</form>
 
 	<script src="javascript/index.js"></script>
 </body>
+
 </html>

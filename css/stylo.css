@@ -1,77 +1,82 @@
-
-body{
+body {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	background: azure;
-		
+
 }
 
-h1{
-	
-  
-    text-align: center;
-    color: rgba(15, 15, 15, 0.589);
+h1 {
 
-    
+
+	text-align: center;
+	color: rgba(15, 15, 15, 0.589);
+
+
 }
 
-h2{
+h2 {
 	color: rgb(2, 24, 16);
 }
 
-form{
+form {
 	font-weight: bold;
-	
+
 }
-input{
+
+input {
 	width: 700px;
 	margin: 8px;
 	box-sizing: border-box;
 	border: 2px solid red;
 	border-radius: 4px;
 	font-size: 20px;
-	
-	
-  }
 
-#tamanho{
-	width: 50px;
+
 }
-#inAtivo{
-	width: 50px;
-}
-#sexo{
+
+#tamanho {
 	width: 50px;
 }
 
-  input:focus{
+#inAtivo {
+	width: 50px;
+}
+
+#sexo {
+	width: 50px;
+}
+
+input:focus {
 	outline: 4px solid #00ffffaf;
-  }
-
-table{
-	border-collapse: collapse;
-	width:100%;
-	
 }
-th, td {
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+}
+
+th,
+td {
 	padding: 5px;
 	text-align: center;
 	border: 1px solid;
 	font-size: 18px;
 	border-color: red;
-	
-  }
-
-th{
-	background-color: rgba(119, 119, 119, 0.212)
 
 }
-  
-tr:hover {background-color: rgba(197, 196, 196, 0.671)}
+
+th {
+	background-color: rgba(119, 119, 119, 0.212)
+}
+
+tr:hover {
+	background-color: rgba(197, 196, 196, 0.671)
+}
 
 
 
-  select{
+select {
 	color: darkblue;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
@@ -80,9 +85,9 @@ tr:hover {background-color: rgba(197, 196, 196, 0.671)}
 	width: 200px;
 	margin: 8px;
 
-  }
+}
 
-  button{
+button {
 	background-color: white;
 	color: black;
 	border: 2px solid #555555;
@@ -91,10 +96,11 @@ tr:hover {background-color: rgba(197, 196, 196, 0.671)}
 	margin: 2px 0;
 	border-radius: 4px;
 	font-size: 20px;
-	
+
 
 }
-button:hover{
+
+button:hover {
 	background-color: rgba(77, 76, 76, 0.671);
-  color: white;
+	color: white;
 }

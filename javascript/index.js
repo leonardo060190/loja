@@ -1,5 +1,5 @@
 
-function logar(){
+function logar() {
     // login e senha
     const login = "leonardo@hotmail.com"
     const pass = "leonardo"
@@ -7,16 +7,16 @@ function logar(){
     let pegaUsuario = document.getElementById("email").value;
     let pegaSenha = document.getElementById("senha").value;
 
-    if (pegaUsuario == login && pegaSenha == pass){
-         return true;
+    if (pegaUsuario == login && pegaSenha == pass) {
+        return true;
         // alerta se a senha e o login incorretos
-    }else{
+    } else {
         alert("email ou senha incorretos! Tente novamente.");
-            return false;
-};
+        return false;
+    };
 };
 
-function cadastrarProdutos(){
+function cadastrarProdutos() {
 
     const sexo = document.querySelector('input[name="sexo"]:checked').value;
     console.log(sexo)
@@ -27,53 +27,53 @@ function cadastrarProdutos(){
     let nome = document.getElementById("inNome").value;
     let categoria = document.getElementById("inCategoria").value;
     let preco = document.getElementById("inPreco").value;
-    let ativo = document. querySelector('input[name="inAtivo"]:checked').value;
+    let ativo = document.querySelector('input[name="inAtivo"]:checked').value;
 
-        if (sessionStorage.getItem("vetor_produtos")){
+    if (sessionStorage.getItem("vetor_produtos")) {
         produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
 
     };
-    
+
 
     let descricao_do_Produto = {};
-            descricao_do_Produto = {
-                Codigo: codigo,
-                Nome: nome,
-                Categoria: categoria, 
-                Preco_de_Venda: preco,
-                // Tamanho_Disponivel: tamanho,
-                Ativo: ativo
-            };
+    descricao_do_Produto = {
+        Codigo: codigo,
+        Nome: nome,
+        Categoria: categoria,
+        Preco_de_Venda: preco,
+        // Tamanho_Disponivel: tamanho,
+        Ativo: ativo
+    };
 
-        produtos.push(descricao_do_Produto);
-        sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
+    produtos.push(descricao_do_Produto);
+    sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
 
-            return true;
+    return true;
 
-            
+
 };
 
-function listarProdutos(){
+function listarProdutos() {
     let dados = document.getElementById("colunas");
     let registros = document.getElementsByTagName("tbody")[0];
     let produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
-    
-    
-    for (let i = 0; i < produtos.length; i++){
+
+
+    for (let i = 0; i < produtos.length; i++) {
 
         let novaLinha = document.createElement("tr");
 
         registros.appendChild(novaLinha);
 
         novaLinha.innerHTML = dados.innerHTML;
-       
-        for (let indice in novaLinha.childNodes){
+
+        for (let indice in novaLinha.childNodes) {
 
             let celula = novaLinha.childNodes[indice];
 
-            if(celula.nodeName == "TD"){
+            if (celula.nodeName == "TD") {
 
-                switch(celula.dataset.column){
+                switch (celula.dataset.column) {
                     case "Codigo":
                         celula.innerHTML = produtos[i]["Codigo"];
                         break;
@@ -81,7 +81,7 @@ function listarProdutos(){
                         celula.innerHTML = produtos[i]["Nome"];
                         break;
                     case "Categoria":
-                        celula.innerHTML  = produtos[i]["Categoria"]
+                        celula.innerHTML = produtos[i]["Categoria"]
                         break;
                     case "Preco_de_Venda":
                         celula.innerHTML = produtos[i]["Preco_de_Venda"];
@@ -92,7 +92,7 @@ function listarProdutos(){
                     case "Ativo":
                         celula.innerHTML = produtos[i]["Ativo"];
                         break;
-                    
+
                 }
             }
         }
@@ -100,7 +100,8 @@ function listarProdutos(){
 }
 
 
-function cadastrar_clientes(){
+function cadastrar_clientes() {
+
     let clientes = [];
 
     let codigo = document.getElementById("inCodigo").value;
@@ -110,36 +111,36 @@ function cadastrar_clientes(){
     let telefone = document.getElementById("inTelefone").value;
     let email = document.getElementById("inEmail").value;
 
-        if(sessionStorage.getItem("vetor_Clientes")){
-            clientes = JSON.parse(sessionStorage.getItem("vetor_Clientes"));
+    if (sessionStorage.getItem("vetor_Clientes")) {
+        clientes = JSON.parse(sessionStorage.getItem("vetor_Clientes"));
 
-        };
+    };
 
-        let descricao_do_Cliente = {};
-                descricao_do_Cliente = {
-                    Codigo: codigo,
-                    Nome: nome,
-                    CPF: cpf,
-                    Data_de_Nascimento: dataNacimento,
-                    Telefone: telefone,
-                    Email: email
+    let descricao_do_Cliente = {};
+    descricao_do_Cliente = {
+        Codigo: codigo,
+        Nome: nome,
+        CPF: cpf,
+        Data_de_Nascimento: dataNacimento,
+        Telefone: telefone,
+        Email: email
 
-                };
+    };
 
-            clientes.push(descricao_do_Cliente);
-            sessionStorage.setItem("vetor_Clientes", JSON.stringify(clientes));
+    clientes.push(descricao_do_Cliente);
+    sessionStorage.setItem("vetor_Clientes", JSON.stringify(clientes));
 
-                return true;
+    return true;
 
 };
 
-function listarClientes(){
+function listarClientes() {
 
     let dados = document.getElementById("colunas");
     let registros = document.getElementsByTagName("tbody")[0];
     let clientes = JSON.parse(sessionStorage.getItem("vetor_Clientes"));
 
-    for (let i = 0; i < clientes.length; i++){
+    for (let i = 0; i < clientes.length; i++) {
 
         let novaLinha = document.createElement("tr");
 
@@ -147,13 +148,13 @@ function listarClientes(){
 
         novaLinha.innerHTML = dados.innerHTML;
 
-        for(let indice in novaLinha.childNodes){
+        for (let indice in novaLinha.childNodes) {
 
             let celula = novaLinha.childNodes[indice];
 
-            if(celula.nodeName == "TD"){
+            if (celula.nodeName == "TD") {
 
-                switch(celula.dataset.column){
+                switch (celula.dataset.column) {
                     case "Codigo":
                         celula.innerHTML = clientes[i]["Codigo"];
                         break;
@@ -161,7 +162,7 @@ function listarClientes(){
                         celula.innerHTML = clientes[i]["Nome"];
                         break;
                     case "CPF":
-                        celula.innerHTML  = clientes[i]["CPF"]
+                        celula.innerHTML = clientes[i]["CPF"]
                         break;
                     case "Data_de_Nascimento":
                         celula.innerHTML = clientes[i]["Data_de_Nascimento"];
@@ -176,6 +177,9 @@ function listarClientes(){
             };
         }
     }
-    
+
 
 }
+
+
+// Pagina de menu
