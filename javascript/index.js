@@ -37,7 +37,7 @@ function cadastrarProdutos() {
     let nome = document.getElementById("inNome").value;
     let categoria = document.getElementById("inCategoria").value;
     let preco = document.getElementById("inPreco").value;
-    let tamanho = tamanhoCadastrado;
+    // let tamanho = tamanhoCadastrado;
     let ativo = document.querySelector('input[name="inAtivo"]:checked').value;
 
     if (sessionStorage.getItem("vetor_produtos")) {

@@ -105,4 +105,55 @@ button:hover {
 	color: white;
 }
 
+hr{
+	border-color: goldenrod;
+	
+}
+
 /* pagina inicial */
+
+
+
+/* * unvisited link */
+a:link {
+	color: red;
+}
+
+/* visited link */
+a:visited {
+	color: magenta;
+}
+
+/* mouse over link */
+a:hover {
+	color: royalblue;
+}
+
+/* selected link */
+a:active {
+	color: rebeccapurple;
+
+}
+
+.a {
+    border-style: double;
+    border-color: seagreen;
+    background-color:aqua;
+	font-size: 30px;
+
+}
+
+#tituloprincipal{
+    border-style: double;
+    border-color: rgba(238, 130, 238, 0.712);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 1px black, 0 0 25px blue, 0 0 10px darkblue;
+    font-size: 50px;
+}
+
+#menu {
+    border-style: double;
+    border-color: goldenrod;
+    text-align: center;
+}
