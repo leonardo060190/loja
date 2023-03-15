@@ -13,20 +13,20 @@
 	<h1>Cadastro de Produtos</h1>
 	<hr>
 	<!-- inicio do formulário de cadastro -->
-	<form id="inCadastro" name="inCadastro">
+	<form id="inCadastro" name="inCadastro" autocomplete = "off">
 
 		<!-- campo de Código do produto -->
 		<div><label for="l_codigo">Código</label></div>
 		<input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código"
-			required>
+		autocomplete = "off" required>
 
 		<!-- campo de nome do produto -->
 		<div><label for="l_Nome">Nome</label></div>
-		<input type="text" name="inNome" id="inNome" size="40" maxlength="50" placeholder="Digite o Nome" required>
+		<input type="text" name="inNome" id="inNome" size="40" maxlength="50" placeholder="Digite o Nome" autocomplete = "off" required>
 
 		<!-- campo de Preço do produto -->
 		<div><label for="l_Preço">Preço de Venda</label></div>
-		<input type="text" name="inPreço" id="inPreco" size="40" maxlength="50" placeholder="Digite o Preço" required>
+		<input type="text" name="inPreço" id="inPreco" size="40" maxlength="50" placeholder="Digite o Preço" autocomplete = "off" required>
 
 		<p>
 			<!-- campo de seleção de categorias -->
@@ -46,16 +46,16 @@
 		<!-- campo checkbox para selecionar Tamanhos Disponiveis -->
 		<label for="l_esporte">Tamanhos Disponiveis:</label>
 
-		<input type="checkbox" name="tamanhoP" id="tamanho" value="P">
+		<input type="checkbox" name="tamanhoP" id="tamanho" value="P" onclick="tamanho()">
 		<label for=" l_P">P</label>
 
-		<input type="checkbox" name="tamanhoM" id="tamanho" value="M">
+		<input type="checkbox" name="tamanhoM" id="tamanho" value="M" onclick="tamanho()">
 		<label for="l_M">M</label>
 
-		<input type="checkbox" name="tamanhoG" id="tamanho" value="G">
+		<input type="checkbox" name="tamanhoG" id="tamanho" value="G" onclick="tamanho()">
 		<label for="l_M">G</label>
 
-		<input type="checkbox" name="tamanhoGG" id="tamanho" value="GG">
+		<input type="checkbox" name="tamanhoGG" id="tamanho" value="GG" onclick="tamanho()">
 		<label for="l_GG">GG</label>
 		</p>
 		<p>
@@ -89,7 +89,7 @@
 			onclick="window.location='Lista_de_Produtos.html'">Retrone a Lista</button>
 
 		<button type="button" name="restornoMenu" id="restornoMenu"
-			onclick="window.location='Pagina_de_Menu.html'">Pagina
+			onclick="window.location='Pagina_inicial.html'">Pagina
 			Inicial</button>
 
 	</form>

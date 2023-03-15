@@ -16,6 +16,16 @@ function logar() {
     };
 };
 
+function tamanho() {
+    let tamanho1 = document.querySelectorAll('[name=tamanho]:checked');
+    let tamanhoCadastrado = [];
+    for (let i = 0; i < tamanho1.length; i++) {
+      // utilize o valor aqui, adicionei ao array para exemplo
+      tamanho1.push(tamanhoCadastrado[i].value);
+    }
+    console.log(tamanhoCadastrado)
+  }
+
 function cadastrarProdutos() {
 
     const sexo = document.querySelector('input[name="sexo"]:checked').value;
@@ -27,6 +37,7 @@ function cadastrarProdutos() {
     let nome = document.getElementById("inNome").value;
     let categoria = document.getElementById("inCategoria").value;
     let preco = document.getElementById("inPreco").value;
+    let tamanho = tamanhoCadastrado;
     let ativo = document.querySelector('input[name="inAtivo"]:checked').value;
 
     if (sessionStorage.getItem("vetor_produtos")) {
@@ -41,7 +52,7 @@ function cadastrarProdutos() {
         Nome: nome,
         Categoria: categoria,
         Preco_de_Venda: preco,
-        // Tamanho_Disponivel: tamanho,
+        Tamanho_Disponivel: tamanho,
         Ativo: ativo
     };
 
@@ -51,7 +62,11 @@ function cadastrarProdutos() {
     return true;
 
 
+   
+
 };
+
+
 
 function listarProdutos() {
     let dados = document.getElementById("colunas");
@@ -86,9 +101,9 @@ function listarProdutos() {
                     case "Preco_de_Venda":
                         celula.innerHTML = produtos[i]["Preco_de_Venda"];
                         break;
-                    // case "Tamanho_Disponivel":
-                    //     celula.innerHTML = produtos[i]["Tamanho_Disponivel"];
-                    //     break;
+                    case "Tamanho_Disponivel":
+                        celula.innerHTML = produtos[i]["Tamanho_Disponivel"];
+                        break;
                     case "Ativo":
                         celula.innerHTML = produtos[i]["Ativo"];
                         break;
