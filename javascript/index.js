@@ -16,20 +16,22 @@ function logar() {
     };
 };
 
-function tamanho() {
-    let tamanho1 = document.querySelectorAll('[name=tamanho]:checked');
-    let tamanhoCadastrado = [];
-    for (let i = 0; i < tamanho1.length; i++) {
-      // utilize o valor aqui, adicionei ao array para exemplo
-      tamanho1.push(tamanhoCadastrado[i].value);
-    }
-    console.log(tamanhoCadastrado)
-  }
+// function tamanho() {
+//     let tamanho = document.querySelectorAll('[name=tamanho]:checked');
+//     let tamanhoCadastrado = [];
+//     for (let i = 0; i < tamanho.length; i++) {
+//       // utilize o valor aqui, adicionei ao array para exemplo
+//       tamanho.push(tamanhoCadastrado[i].value);
+//     }
+//     console.log(tamanhoCadastrado)
+//   }
 
 function cadastrarProdutos() {
 
     const sexo = document.querySelector('input[name="sexo"]:checked').value;
     console.log(sexo)
+
+
 
     let produtos = [];
 
@@ -37,8 +39,27 @@ function cadastrarProdutos() {
     let nome = document.getElementById("inNome").value;
     let categoria = document.getElementById("inCategoria").value;
     let preco = document.getElementById("inPreco").value;
-    let tamanho = tamanhoCadastrado;
     let ativo = document.querySelector('input[name="inAtivo"]:checked').value;
+    let tamanhos = ""
+
+    let tamanhoP = document.getElementById("tamanhoP").checked;
+    let tamanhoM = document.getElementById("tamanhoM").checked;
+    let tamanhoG = document.getElementById("tamanhoG").checked;
+    let tamanhoGG = document.getElementById("tamanhoGG").checked;
+
+
+    if(tamanhoP){
+        tamanhos += " P , ";
+    }
+    if(tamanhoM){
+        tamanhos += " M , ";
+    }
+    if(tamanhoG){
+        tamanhos += " G , ";
+    }
+    if(tamanhoGG){
+        tamanhos += " GG ";
+    }
 
     if (sessionStorage.getItem("vetor_produtos")) {
         produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
@@ -52,7 +73,7 @@ function cadastrarProdutos() {
         Nome: nome,
         Categoria: categoria,
         Preco_de_Venda: preco,
-        Tamanho_Disponivel: tamanho,
+        Tamanho_Disponivel: tamanhos,
         Ativo: ativo
     };
 
