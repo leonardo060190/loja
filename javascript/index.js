@@ -39,16 +39,16 @@ function cadastrarProdutos() {
     let tamanhoGG = document.getElementById("tamanhoGG").checked;
 
 
-    if(tamanhoP){
+    if (tamanhoP) {
         tamanhos += " P , ";
     }
-    if(tamanhoM){
+    if (tamanhoM) {
         tamanhos += " M , ";
     }
-    if(tamanhoG){
+    if (tamanhoG) {
         tamanhos += " G , ";
     }
-    if(tamanhoGG){
+    if (tamanhoGG) {
         tamanhos += " GG ";
     }
 
@@ -74,7 +74,7 @@ function cadastrarProdutos() {
     return true;
 
 
-   
+
 
 };
 
@@ -204,7 +204,7 @@ function listarClientes() {
             };
         };
     };
-;
+    ;
 
 }
 
