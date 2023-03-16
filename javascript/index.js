@@ -16,15 +16,6 @@ function logar() {
     };
 };
 
-// function tamanho() {
-//     let tamanho = document.querySelectorAll('[name=tamanho]:checked');
-//     let tamanhoCadastrado = [];
-//     for (let i = 0; i < tamanho.length; i++) {
-//       // utilize o valor aqui, adicionei ao array para exemplo
-//       tamanho.push(tamanhoCadastrado[i].value);
-//     }
-//     console.log(tamanhoCadastrado)
-//   }
 
 function cadastrarProdutos() {
 
