@@ -9,58 +9,63 @@
 	<link rel="stylesheet" type="text/css" href="css/Stylo.css">
 
 </head>
+<div id="menu">
 
-<body>
-	<h1>Cadastro de Clientes</h1>
-	<hr>
-	<!-- inicio do formulário de cadastro -->
-	<form id="inCadastro" name="inCadastro" method="post" action="Cadastro_de_Clientes.html" autocomplete = "off">
-
-		<!-- campo de Código do Cliente -->
-		<div><label for="l_codigo">Código</label></div>
-		<input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código"
-		autocomplete = "off" required>
-
-		<!-- campo de nome do Cliente -->
-		<div><label for="NomeCliente">Nome</label></div>
-		<input type="text" name="NomeCliente" id="NomeCliente" size="40" maxlength="50"
-			placeholder="Digite o Nome Completo" autocomplete = "off" required>
-
-		<div><label for="l_CPF">CPF</label></div>
-		<input type="text" name="inCPF" id="inCPF" size="40" maxlength="50" placeholder="Digite o CPF" autocomplete = "off" required>
-
-		<div><label for="l_Data_Nascimento">Data de Nascimento</label></div>
-		<input type="date" name="inData_Nascimento" id="inData_Nascimento" size="40" maxlength="50"
-			placeholder="Digite a Data_de_Nascimento" autocomplete = "off" required>
-
-		<div><label for="l_Telefone">Telefone</label></div>
-		<input type="tel" name="inTelefone" id="inTelefone" size="40" maxlength="50"
-			placeholder="Digite o Número de Telefone" autocomplete = "off" required>
-
-		<div><label for="l_Email">Email</label></div>
-		<input type="email" name="inEmail" id="inEmail" size="40" maxlength="50" placeholder="Digite o Email" autocomplete = "off" required>
-
+	<body>
+		<h1>Cadastro de Clientes</h1>
 		<hr>
-		<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
+		<!-- inicio do formulário de cadastro -->
+		<form id="inCadastro" name="inCadastro" method="post" action="Cadastro_de_Clientes.html" autocomplete="off">
+
+			<!-- campo de Código do Cliente -->
+			<div><label for="l_codigo">Código</label></div>
+			<input type="number" name="inCodigo" id="inCodigo" size="40" maxlength="50" placeholder="Digite o Código"
+				autocomplete="off" required>
+
+			<!-- campo de nome do Cliente -->
+			<div><label for="NomeCliente">Nome</label></div>
+			<input type="text" name="NomeCliente" id="NomeCliente" size="40" maxlength="50"
+				placeholder="Digite o Nome Completo" autocomplete="off" required>
+
+			<div><label for="l_CPF">CPF</label></div>
+			<input type="text" name="inCPF" id="inCPF" size="40" maxlength="50" placeholder="Digite o CPF"
+				autocomplete="off" required>
+
+			<div><label for="l_Data_Nascimento">Data de Nascimento</label></div>
+			<input type="date" name="inData_Nascimento" id="inData_Nascimento" size="40" maxlength="50"
+				placeholder="Digite a Data_de_Nascimento" autocomplete="off" required>
+
+			<div><label for="l_Telefone">Telefone</label></div>
+			<input type="tel" name="inTelefone" id="inTelefone" size="40" maxlength="50"
+				placeholder="Digite o Número de Telefone" autocomplete="off" required>
+
+			<div><label for="l_Email">Email</label></div>
+			<input type="email" name="inEmail" id="inEmail" size="40" maxlength="50" placeholder="Digite o Email"
+				autocomplete="off" required>
+
+			<hr>
+			<br>
+			<button type="reset" name="limpar" id="limpar">Limpar Dados</button>
 
 
-		<!-- botão para cadastrar produtos -->
-		<button type="submit" name="l_Cadastrar_Cliente" id="l_Cadastrar_Cliente"
-			onclick="cadastrar_clientes()">Casdastrar</button>
+			<!-- botão para cadastrar produtos -->
+			<button type="submit" name="l_Cadastrar_Cliente" id="l_Cadastrar_Cliente"
+				onclick="cadastrar_clientes()">Casdastrar</button>
 
-		<!-- botão para voltar a página Lista_de_Produtos -->
-		<button type="button" name="l_retorno_Lista" id="l_retorno_Lista"
-			onclick="window.location='Lista_de_Clientes.html'">Retorne a Lista de clientes</button>
+			<!-- botão para voltar a página Lista_de_Produtos -->
+			<button type="button" name="l_retorno_Lista" id="l_retorno_Lista"
+				onclick="window.location='Lista_de_Clientes.html'">Retorne a Lista de clientes</button>
 
-		<button type="button" name="restornoMenu" id="restornoMenu"
-			onclick="window.location='Pagina_inicial.html'">Pagina
-			Inicial</button>
+			<button type="button" name="restornoMenu" id="restornoMenu"
+				onclick="window.location='Pagina_inicial.html'">Pagina
+				Inicial</button>
+			
+		</form>
+		<br>
 
-	</form>
+</div>
 
-
-
-	<script src="javascript/index.js"></script>
+<script src="javascript/index.js"></script>
 
 </body>
 

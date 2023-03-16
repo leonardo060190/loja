@@ -120,11 +120,11 @@ function listarProdutos() {
                         celula.innerHTML = produtos[i]["Ativo"];
                         break;
 
-                }
-            }
-        }
-    }
-}
+                };
+            };
+        };
+    };
+};
 
 
 function cadastrar_clientes() {
@@ -202,9 +202,9 @@ function listarClientes() {
                         break;
                 };
             };
-        }
-    }
-
+        };
+    };
+;
 
 }
 

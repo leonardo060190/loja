@@ -10,29 +10,30 @@
 </head>
 
 <body onload="listarProdutos()">
-	<h1>Lista de Produtos</h1>
-	<hr>
-	<br>
-	<table borde="2" width="100%">
-		<thead>
-			<tr>
-				<th>Código</th>
-				<th>Nome</th>
-				<th>Categoria</th>
-				<th>Preço de Venda</th>
-				<th>Tamanho disponivel</th>
-				<th>Ativo</th>
-			</tr>
-		</thead>
+	<div id="menu">
+		<h1>Lista de Produtos</h1>
+		<hr>
+		<br>
+		<table borde="2" width="100%">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Nome</th>
+					<th>Categoria</th>
+					<th>Preço de Venda</th>
+					<th>Tamanho disponivel</th>
+					<th>Ativo</th>
+				</tr>
+			</thead>
 
-		<tbody>
+			<tbody>
 
 
-		</tbody>
+			</tbody>
 
-	</table>
+		</table>
 
-	<script id="colunas" type="text/x-jsrender">
+		<script id="colunas" type="text/x-jsrender">
 		<td data-column="Codigo"></td>
 		<td data-column="Nome"></td>
 		<td data-column="Categoria"></td>
@@ -41,15 +42,21 @@
 		<td data-column="Ativo"></td>
 	</script>
 
-	<!-- botão para ir a página de cadastro -->
-	<br><br>
-	<button type="button" name="l_lista" id="l_lista" onclick="window.location='Cadastro_de_Produtos.html'">Casdastro de
-		Produtos</button>
+		<!-- botão para ir a página de cadastro -->
+		<br>
+		<hr>
+		<br>
+		<button type="button" name="l_lista" id="l_lista"
+			onclick="window.location='Cadastro_de_Produtos.html'">Casdastro de
+			Produtos</button>
 
-	<!-- botão para voltar a página de login -->
-	<button type="button" name="l_logoff" id="l_logoff" onclick="window.location='Pagina_de_login.html'">Logoff</button>
+		<!-- botão para voltar a página de login -->
+		<button type="button" name="l_logoff" id="l_logoff"
+			onclick="window.location='Pagina_de_login.html'">Logoff</button>
 
-	<script src="javascript/index.js"></script>
+		<script src="javascript/index.js"></script>
+<br><br>
+	</div>
 </body>
 
 </html>

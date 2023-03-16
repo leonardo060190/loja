@@ -9,30 +9,31 @@
     <link rel="stylesheet" type="text/css" href="css/Stylo.css">
 
 </head>
+<div id="menu">
 
-<body onload="listarClientes()">
-    <h1>Lista de Clientes</h1>
-    <hr>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>Data de Nascimento</th>
-                <th>Telefone</th>
-                <th>Email</th>
-            </tr>
-        </thead>
+    <body onload="listarClientes()">
+        <h1>Lista de Clientes</h1>
+        <hr>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
 
-        <tbody>
+            <tbody>
 
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
 
-    <script id="colunas" type="text/x-jsrender">
+        <script id="colunas" type="text/x-jsrender">
         <td data-column="Codigo"></td>
         <td data-column="Nome"></td>
         <td data-column="CPF"></td>
@@ -41,18 +42,21 @@
         <td data-column="Email"></td>
     </script>
 
-    <br><br>
-    <hr>
-    <button type="button" name="l_lista" id="l_lista" onclick="window.location='Cadastro_de_Clientes.html'">Casdastro de
-        Clientes</button>
+        <br>
+        <hr>
+        <br>
+        <button type="button" name="l_lista" id="l_lista"
+            onclick="window.location='Cadastro_de_Clientes.html'">Casdastro de
+            Clientes</button>
 
-    <!-- botão para voltar a página de login -->
-    <button type="button" name="l_logoff" id="l_logoff" onclick="window.location='Pagina_de_login.html'">Logoff</button>
+        <!-- botão para voltar a página de login -->
+        <button type="button" name="l_logoff" id="l_logoff"
+            onclick="window.location='Pagina_de_login.html'">Logoff</button>
+<br><br>
+</div>
 
 
-
-
-    <script src="javascript/index.js"></script>
+<script src="javascript/index.js"></script>
 
 </body>
 

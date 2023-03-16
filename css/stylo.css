@@ -56,7 +56,7 @@ table {
 
 }
 
-th,
+
 td {
 	padding: 5px;
 	text-align: center;
@@ -67,6 +67,11 @@ td {
 }
 
 th {
+	padding: 5px;
+	text-align: center;
+	border: 1px solid;
+	font-size: 18px;
+	border-color: red;
 	background-color: rgba(119, 119, 119, 0.212)
 }
 
@@ -107,29 +112,28 @@ button:hover {
 
 hr{
 	border-color: goldenrod;
+	border-style: dashed;
 	
 }
 
 /* pagina inicial */
 
 
-
-/* * unvisited link */
 a:link {
 	color: red;
 }
 
-/* visited link */
+
 a:visited {
-	color: magenta;
+	color: rgb(65, 9, 65);
 }
 
-/* mouse over link */
+
 a:hover {
 	color: royalblue;
 }
 
-/* selected link */
+
 a:active {
 	color: rebeccapurple;
 
@@ -138,17 +142,17 @@ a:active {
 .a {
     border-style: double;
     border-color: seagreen;
-    background-color:aqua;
+    background-color:rgba(189, 224, 224, 0.589);
 	font-size: 30px;
 
 }
 
 #tituloprincipal{
     border-style: double;
-    border-color: rgba(238, 130, 238, 0.712);
+    border-color: rgba(216, 44, 44, 0.596);
     text-align: center;
     color: white;
-    text-shadow: 2px 2px 1px black, 0 0 25px blue, 0 0 10px darkblue;
+    text-shadow: 2px 2px 1px black, 0 0 25px rgb(58, 58, 63), 0 0 10px rgb(29, 29, 44);
     font-size: 50px;
 }
 
@@ -156,4 +160,5 @@ a:active {
     border-style: double;
     border-color: goldenrod;
     text-align: center;
+	
 }
