@@ -19,13 +19,13 @@ function logar() {
 
 function cadastrarProdutos() {
 
-    const sexo = document.querySelector('input[name="sexo"]:checked').value;
-    console.log(sexo)
 
 
 
     let produtos = [];
 
+    let sexo = document.querySelector('input[name="sexo"]:checked').value;
+   
     let codigo = document.getElementById("inCodigo").value;
     let nome = document.getElementById("inNome").value;
     let categoria = document.getElementById("inCategoria").value;
@@ -52,29 +52,33 @@ function cadastrarProdutos() {
         tamanhos += " GG ";
     }
 
-    if (sessionStorage.getItem("vetor_produtos")) {
-        produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
+    if (sexo == "" && codigo == "" && nome == "" && categoria == "" && preco == "" && ativo == "" && tamanhoP == "" && tamanhoM == "" && tamanhoG == "" && tamanhoGG == ""){
+        alert("Por Favor, Preencha todos os campos!")
+    } else {
+        alert("Cadastro efetuado com suceso!")
 
-    };
+        if (sessionStorage.getItem("vetor_produtos")) {
+            produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
 
-
-    let descricao_do_Produto = {};
-    descricao_do_Produto = {
-        Codigo: codigo,
-        Nome: nome,
-        Categoria: categoria,
-        Preco_de_Venda: preco,
-        Tamanho_Disponivel: tamanhos,
-        Ativo: ativo
-    };
-
-    produtos.push(descricao_do_Produto);
-    sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
-
-    return true;
+        };
 
 
+        let descricao_do_Produto = {};
+        descricao_do_Produto = {
+            Codigo: codigo,
+            Nome: nome,
+            Categoria: categoria,
+            Preco_de_Venda: preco,
+            Tamanho_Disponivel: tamanhos,
+            Ativo: ativo
+        };
 
+        produtos.push(descricao_do_Produto);
+        sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
+
+        return true;
+
+    }
 
 };
 
@@ -138,26 +142,33 @@ function cadastrar_clientes() {
     let telefone = document.getElementById("inTelefone").value;
     let email = document.getElementById("inEmail").value;
 
-    if (sessionStorage.getItem("vetor_Clientes")) {
-        clientes = JSON.parse(sessionStorage.getItem("vetor_Clientes"));
+    if (codigo == "" && nome == "" && cpf == "" && dataNacimento == "" && telefone == "" && email == "") {
+        alert("Por favor, Preencha todos os campos!")
+    } else {
+        alert("Cadastro efetuado com suceso!")
 
-    };
+        if (sessionStorage.getItem("vetor_Clientes")) {
+            clientes = JSON.parse(sessionStorage.getItem("vetor_Clientes"));
 
-    let descricao_do_Cliente = {};
-    descricao_do_Cliente = {
-        Codigo: codigo,
-        Nome: nome,
-        CPF: cpf,
-        Data_de_Nascimento: dataNacimento,
-        Telefone: telefone,
-        Email: email
+        };
 
-    };
+        let descricao_do_Cliente = {};
+        descricao_do_Cliente = {
+            Codigo: codigo,
+            Nome: nome,
+            CPF: cpf,
+            Data_de_Nascimento: dataNacimento,
+            Telefone: telefone,
+            Email: email
 
-    clientes.push(descricao_do_Cliente);
-    sessionStorage.setItem("vetor_Clientes", JSON.stringify(clientes));
+        };
 
-    return true;
+        clientes.push(descricao_do_Cliente);
+        sessionStorage.setItem("vetor_Clientes", JSON.stringify(clientes));
+
+        return true;
+    }
+
 
 };
 
@@ -209,4 +220,4 @@ function listarClientes() {
 }
 
 
-// Pagina de menu
+

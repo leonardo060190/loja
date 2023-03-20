@@ -14,7 +14,7 @@
 		<h1>Cadastro de Produtos</h1>
 		<hr>
 		<!-- inicio do formulário de cadastro -->
-		<form id="inCadastro" name="inCadastro" autocomplete="off">
+		<form id="inCadastro" name="inCadastro" method="post" autocomplete="off">
 
 			<!-- campo de Código do produto -->
 			<div><label for="l_codigo">Código</label></div>
@@ -86,7 +86,7 @@
 
 
 			<!-- botão para cadastrar produtos -->
-			<button type="button" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrarProdutos()">Casdastrar</button>
+			<button type="submit" name="l_Cadastrar" id="l_Cadastrar" onclick="cadastrarProdutos()">Casdastrar</button>
 
 			<!-- botão para voltar a página Lista_de_Produtos -->
 			<button type="button" name="l_retorno_Lista" id="l_retorno_Lista"
