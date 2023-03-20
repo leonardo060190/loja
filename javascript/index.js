@@ -17,6 +17,7 @@ function logar() {
 };
 
 
+
 function cadastrarProdutos() {
 
 
@@ -31,7 +32,7 @@ function cadastrarProdutos() {
     let categoria = document.getElementById("inCategoria").value;
     let preco = document.getElementById("inPreco").value;
     let ativo = document.querySelector('input[name="inAtivo"]:checked').value;
-    let tamanhos = ""
+    let tamanhos = " "
 
     let tamanhoP = document.getElementById("tamanhoP").checked;
     let tamanhoM = document.getElementById("tamanhoM").checked;
@@ -40,16 +41,16 @@ function cadastrarProdutos() {
 
 
     if (tamanhoP) {
-        tamanhos += " P , ";
+        tamanhos += "  P  ";
     }
     if (tamanhoM) {
-        tamanhos += " M , ";
+        tamanhos += "  M  ";
     }
     if (tamanhoG) {
-        tamanhos += " G , ";
+        tamanhos += "  G  ";
     }
     if (tamanhoGG) {
-        tamanhos += " GG ";
+        tamanhos += "  GG  ";
     }
 
     if (sexo == "" && codigo == "" && nome == "" && categoria == "" && preco == "" && ativo == "" && tamanhoP == "" && tamanhoM == "" && tamanhoG == "" && tamanhoGG == ""){
@@ -79,9 +80,7 @@ function cadastrarProdutos() {
         return true;
 
     }
-
 };
-
 
 
 function listarProdutos() {
@@ -215,9 +214,6 @@ function listarClientes() {
             };
         };
     };
-    ;
+    
 
 }
-
-
-
