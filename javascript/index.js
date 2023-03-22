@@ -53,7 +53,7 @@ function cadastrarProdutos() {
         tamanhos += "  GG  ";
     }
 
-    if (sexo == "" && codigo == "" && nome == "" && categoria == "" && preco == "" && ativo == "" && tamanhoP == "" && tamanhoM == "" && tamanhoG == "" && tamanhoGG == ""){
+    if (sexo == "" && codigo == "" && nome == "" && categoria == "" && preco == "" && ativo == "" && tamanhos == ""){
         alert("Por Favor, Preencha todos os campos!")
     } else {
         alert("Cadastro efetuado com suceso!")
